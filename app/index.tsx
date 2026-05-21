@@ -1,15 +1,10 @@
-import { Text, View } from "react-native";
+import { WeatherView } from "@/src/view/WeatherView";
+import { useWeatherViewModel } from "@/src/viewmodel/weather.viewmodel";
 
 export default function Index() {
+  const WeatherViewModel = useWeatherViewModel()
+  
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>FUNCIONANDO</Text>
-    </View>
+    <WeatherView {...WeatherViewModel}/>
   );
 }
