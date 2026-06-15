@@ -1,50 +1,93 @@
-# Welcome to your Expo app 👋
+# Weather App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile desenvolvido com React Native e Expo para consulta de informações climáticas em tempo real.
 
-## Get started
+O aplicativo permite pesquisar cidades, visualizar as condições climáticas atuais, acompanhar a previsão das próximas horas e utilizar a localização atual do dispositivo para obter informações meteorológicas de forma rápida e intuitiva.
 
-1. Install dependencies
+## Funcionalidades
 
-   ```bash
-   npm install
-   ```
+* Consulta do clima atual
+* Busca de cidades por nome
+* Geolocalização
+* Previsão por hora
+* Histórico de locais pesquisados
+* Limpeza do histórico de pesquisas
 
-2. Start the app
+## Tecnologias Utilizadas
 
-   ```bash
-   npx expo start
-   ```
+* React Native
+* Expo
+* Expo Go
+* TypeScript
+* OpenWeather API
+* Pexels API
 
-In the output, you'll find options to open the app in a
+## Arquitetura
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+O projeto segue o padrão MVVM (Model-View-ViewModel), promovendo uma melhor separação entre interface, lógica de negócio e gerenciamento de estado.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+src/
+├── components/
+├── hooks/
+├── model/
+├── services/
+├── stores/
+├── utils/
+├── view/
+└── viewmodel/
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Como rodar o projeto
 
-## Learn more
+Clone o repositório:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+git clone https://github.com/seu-usuario/weather-app.git
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Acesse a pasta do projeto:
 
-## Join the community
+```bash
+cd weather-app
+```
 
-Join our community of developers creating universal apps.
+Instale as dependências:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npm install
+```
+
+Crie um arquivo `.env` na raiz do projeto:
+
+```env
+EXPO_PUBLIC_OPENWEATHER_API_KEY=SUA_CHAVE
+EXPO_PUBLIC_PEXELS_API_KEY=SUA_CHAVE
+```
+
+Inicie o servidor:
+
+```bash
+npx expo start
+```
+
+Instale o aplicativo **Expo Go** em seu dispositivo Android ou iOS.
+
+Após iniciar o projeto, escaneie o QR Code exibido no terminal ou navegador utilizando o Expo Go para executar o aplicativo em seu dispositivo móvel.
+
+## Capturas de Tela
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/26a8ffa4-062e-4c18-bfb3-d7bdeeb24872" width="250" />
+      <br>
+      <strong>Tela Inicial</strong>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/f209f60e-f7c5-456a-89e8-1a850ca0db9c" width="250" />
+      <br>
+      <strong>Busca de Localização</strong>
+    </td>
+  </tr>
+</table>
